@@ -1,0 +1,18 @@
+# run 'docker-compose -f docker-compose.yml up -d' to start the image
+
+version: "3"
+services:
+  myserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - "--no-cache"
+    working_dir: /usr/app
+    volumes:
+      - .:/usr/app
+    tty: true 
+    ports:
+      - "8000:8000"
+    env_file:
+        ./.env
