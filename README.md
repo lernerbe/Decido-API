@@ -1,4 +1,4 @@
-# issac-service
+# Decido API
 
 1. ```python -m venv env``` 
 2. ```pip install --no-cache-dir -r requirements.txt ```
